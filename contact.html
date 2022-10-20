@@ -1,0 +1,81 @@
+<?php
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+$server="localhost";
+$username="root";
+$password="";
+$database="contact";
+
+$conn=mysqli_connect($server,$username,$password,$database);
+
+// echo("heheheheheh");
+// if(!$conn)
+// {
+//   echo("ERROR");
+// }
+// else{
+//   echo("connect");
+// }
+
+$name=$_POST["name"];
+$email=$_POST["E-mail"];
+$message=$_POST["message"];
+
+$sql="INSERT INTO `contact` (`Sr.no`, `name`, `E-mail`, `message`) VALUES (NULL, '$name', '$email', '$message');";
+
+$result=mysqli_query($conn, $sql);
+if($result)
+{
+  echo("ERROR");
+}
+else{
+  echo("connect");
+}
+}
+?>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Contact Form</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  </head>
+  <body>
+<div class="bodyimg">
+   
+
+    <!--contact section start-->
+    <div class="contact-section">
+        <!-- <img src="contact.jpg" alt=""> -->
+      <div class="contact-info">
+        <div><i class="fas fa-map-marker-alt"></i>Charusat campus,Anand</div>
+        <div><i class="fas fa-envelope"></i>fastpharma@yahoo.com</div>
+        <div><i class="fas fa-phone"></i>+91 942** **355</div>
+        <div><i class="fas fa-clock"></i>SUN - SAT 7:00 AM to 6:00 PM</div>
+      </div>
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form class="contact" action="" method="post">
+          <input type="text" name="name" class="text-box" placeholder="Your Name" required>
+          <input type="email" name="E-mail" class="text-box" placeholder="Your Email" required>
+         <textarea name="message" id="message"  rows="10" placeholder="Type Your Message Here"></textarea>
+          <input type="submit" name="submit" class="send-btn" value="Send">
+        </form>
+      </div>
+    </div>
+    <div>
+      <form>
+        <a href="index.html" ><input type="button" name="submit" class="back-btn" value="Back"></a>
+      </form>
+    </div>
+    <!--contact section end-->
+
+</div>   
+  </body>
+</html>

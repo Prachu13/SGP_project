@@ -1,0 +1,61 @@
+body{
+    background: white;
+    margin: 0px;
+    padding: 0px;
+    text-align:center;
+    width: 100%;
+    }
+     
+    input[type=text],[type=password]{
+        width: 20%;
+        margin: 8px 0;
+        padding: 7px 10px;
+        display: inline-block;
+        border:1px solid #ccc;
+        box-sizing: border-box;
+        box-shadow: 5px 5px #14141471;
+        border-radius: 8px;
+        }
+     
+button{
+        background-color:#1ab4c5;
+        width: 10%;
+        padding: 9px 5px;
+        margin:20px 20px;
+        cursor:pointer;
+        border:none;
+        color:#ffffff;
+        margin-left: 80px;
+        border-radius: 80px;
+
+        }
+     
+button:hover{
+    opacity:0.8;
+    }
+     
+#un,#ps{
+    font-family:'Lato', sans-serif;
+    color: gray;
+    }
+
+#keval{
+    margin-top: 10%;
+}
+
+#tari{
+    
+}
+.container-fluid{
+}
+.nav-link{
+    font-size: x-large;
+}
+#vachma{
+    margin-left: 5pc;
+
+}
+.icon{
+   block-size: 70px;
+}
+

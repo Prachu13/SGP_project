@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f2f2f2;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .search {
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+
+        .searchTerm {
+            width: 100%;
+            border: 3px solid #00B4CC;
+            border-right: none;
+            padding: 5px;
+            height: 20px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            color: #9DBFAF;
+        }
+
+        .searchTerm:focus {
+            color: #00B4CC;
+        }
+
+        .searchButton {
+            width: 40px;
+            height: 20px;
+            border: 1px solid #1ab4c5;
+            background: #1ab4c5;
+            text-align: center;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /*Resize the wrap to see the search bar change!*/
+        .wrap {
+            width: 30%;
+            position: absolute;
+            top: 7%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .Heading {
+            font-size: 40px;
+            font-weight: 200;
+            text-align: center;
+        }
+
+        .info {
+            text-align: center;
+        }
+
+        .overview {
+            font-size: 30px;
+            color: blue;
+        }
+
+        .p1 {
+            margin-left: auto;
+            text-align: left;
+        }
+
+        .p2 {
+            text-align: left;
+        }
+
+        .p3 {
+            text-align: left;
+        }
+
+        .Heading {
+            color: red;
+        }
+
+        .mosquito {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .Symptoms_h {
+            text-align: center;
+            font-size: 30px;
+            color: blue;
+        }
+
+        .list {
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            font-size: 20px;
+        }
+
+        .types_s {
+            text-align: center;
+            font-size: 30px;
+            color: blue;
+        }
+
+        .type_d {
+            text-align: center;
+        }
+
+        .t1 {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .t2 {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .t3 {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .t4 {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .TYPE_CORONA {
+            text-align: center;
+            ;
+            font-size: 30px;
+            color: blue;
+        }
+        .dropbtn {
+          background-color: #f2f2f2;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown-content a:hover {background-color: #ddd;}
+        
+        .dropdown:hover .dropdown-content {display: block;}
+        
+        .dropdown:hover .dropbtn {color: rgb(8, 1, 1);}
+    </style>
+    <title></title>
+</head>
+
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <img style="block-size: 70px;" src="FastPharma_LOGO.png" class="icon">
+                <span class="ml-3 text-xl">FASTPHARMA</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-gray-900 cursor:pointer" href="index.html">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">disease</button>
+                    <div class="dropdown-content">
+                      <a href="dengue.html">Dangue</a>
+                      <a href="corona.html">Corona</a>
+                    </div>
+                  </div>
+                <a class="mr-5 hover:text-gray-900" href="contact.html">Contact Us</a>
+                <a class="mr-5 hover:text-gray-900" href="login.html">Login/Signup</a>
+            </nav>
+            <!-- <button style="background-color: #1ab4c5; color:#fff;"
+                class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Login/Signup
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button> -->
+        </div>
+    </header>
+    <div class="wrap">
+        <div class="search">
+            <input type="text" class="searchTerm" placeholder="Search disease...">
+            <button type="submit" class="searchButton">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+    <h1 class="Heading">CORONA</h1>
+    <br>
+    <div class="corona">
+        <center><img src="corona.jpg" alt="Microscopic Image of Corona Virus"></center>
+    </div>
+    <h1 class="info">
+        <div class="overview">1.OVERVIEW</div><br><br>
+        <p class="p1"> &#187;&#187;Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2
+            virus.</p>
+        <br>
+        <p class="p2"> &#187;&#187;Most people infected with the virus will experience mild to moderate respiratory
+            illness and recover without requiring special treatment. However, some will become seriously ill and require
+            medical attention. Older people and those with underlying medical conditions like cardiovascular disease,
+            diabetes, chronic respiratory disease, or cancer are more likely to develop serious illness. Anyone can get
+            sick with COVID-19 and become seriously ill or die at any age. </p>
+        <br>
+        <p class="p3"> &#187;&#187;The virus can spread from an infected person’s mouth or nose in small liquid
+            particles when they cough, sneeze, speak, sing or breathe. These particles range from larger respiratory
+            droplets to smaller aerosols. It is important to practice respiratory etiquette, for example by coughing
+            into a flexed elbow, and to stay home and self-isolate until you recover if you feel unwell.Stay informed:
+        </p>
+    </h1>
+    <br>
+    <hr><br>
+    <div class="Symptoms">
+        <h1 class="Symptoms_h">2.Symptoms of Corona</h1>
+        <div class="list">
+            <ul style="list-style-type:disc">
+                <li>fever
+
+
+                </li>
+                <li>cough.</li>
+                <li> tiredness</li>
+                <li> loss of taste or smell</li>
+                <li>sore throat </li>
+                <li> headache</li>
+                <li> aches and pains</li>
+                <li> diarrhoea</li>
+                <li>a rash on skin, or discolouration of fingers or toes</li>
+                <li>red or irritated eyes</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <h1 class="type">
+        <div class="types_s">3.Types Of Corona</div><br><br>
+        <p class="type_p"> &#187;There are fourTrusted Source subtypes of coronavirus — alpha, beta, gamma, and delta
+            —and scientists use these classifications to categorize the various species.
+            <br>
+            &#187;Among all the coronaviruses, seven have affected humans. Four of these are common and cause mild
+            illnesses in the upper and lower airways, nose, sinuses, throat, and lungs.
+            <br>
+            <center>&#8226;SARS-CoV-severe acute respiratory syndrome coronavirus</center>
+            <center>&#8226;MERS-Middle East respiratory syndrome coronavirus</center>
+            <center>&#8226;SARS-CoV-2</center>
+            </div>
+        </p>
+        <br>
+        <p class="type_C1">
+        <P class="TYPE_CORONA"> &#8649; Common human coronaviruses &#8647;</P><BR>
+        <div class="t1">[1] 229E</div>
+        </p>
+        <p class="type_C2">
+        <div class="t2">[2] NL63 </div>
+        </p>
+        <p class="type_C3">
+        <div class="t3">[3] OC43</div>
+        </p>
+        <p class="type_C4">
+        <div class="t4">[3] HKU1</div>
+        </p>
+    </h1>
+</body>
+
+</html>

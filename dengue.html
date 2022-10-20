@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f2f2f2;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .search {
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+
+        .searchTerm {
+            width: 100%;
+            border: 3px solid #00B4CC;
+            border-right: none;
+            padding: 5px;
+            height: 20px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            color: #9DBFAF;
+        }
+
+        .searchTerm:focus {
+            color: #00B4CC;
+        }
+
+        .searchButton {
+            width: 40px;
+            height: 20px;
+            border: 1px solid #1ab4c5;
+            background: #1ab4c5;
+            text-align: center;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /*Resize the wrap to see the search bar change!*/
+        .wrap {
+            width: 30%;
+            position: absolute;
+            top: 7%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+
+        }
+        .dropbtn {
+          background-color: #f2f2f2;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown-content a:hover {background-color: #ddd;}
+        
+        .dropdown:hover .dropdown-content {display: block;}
+        
+        .dropdown:hover .dropbtn {color: rgb(8, 1, 1);}
+        .Heading {
+            font-size: 40px;
+            font-weight: 200;
+            text-align: center;
+        }
+
+        .info {
+            text-align: center;
+        }
+
+        .overview {
+            font-size: 30px;
+            color: blue;
+        }
+
+        .p1 {
+            margin-left: auto;
+            text-align: left;
+        }
+
+        .p2 {
+            text-align: left;
+        }
+
+        .p3 {
+            text-align: left;
+        }
+
+        .Heading {
+            color: red;
+        }
+
+        .mosquito {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .Symptoms_h {
+            text-align: center;
+            font-size: 30px;
+            color: blue;
+        }
+
+        .list {
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            font-size: 20px;
+        }
+        .types_s
+        {
+            text-align: center;
+            font-size: 30px;
+            color: blue;
+        }
+        .type_d
+        {
+            text-align: center;
+        }
+        .t1
+        {
+            font-size: 20px;
+        }
+        .t2
+        {
+            font-size: 20px;
+        }
+        .t3
+        {
+            font-size: 20px;
+        }
+    </style>
+    <title></title>
+</head>
+
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <img style="block-size: 70px;" src="FAST.png" class="icon">
+                <span class="ml-3 text-xl">FASTPHARMA</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-gray-900 cursor:pointer" href="index.html">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">disease</button>
+                    <div class="dropdown-content">
+                      <a href="dengue.html">Dangue</a>
+                      <a href="corona.html">Corona</a>
+                    </div>
+                  </div>
+                <a class="mr-5 hover:text-gray-900" href="contact.html">Contact Us</a>
+                <a class="mr-5 hover:text-gray-900" href="login.html">Login/Signup</a>
+            </nav>
+            <!-- <button style="background-color: #1ab4c5; color:#fff;"
+                class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Login/Signup
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button> -->
+        </div>
+    </header>
+    <div class="wrap">
+        <div class="search">
+            <input type="text" class="searchTerm" placeholder="Search disease...">
+            <button type="submit" class="searchButton">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+    <h1 class="Heading">DENGUE</h1>
+    <br>
+    <div class="mosquito">
+        <center><img src="mosquito.jpg" alt="Mosquito of Dengue" ></center>
+    </div>
+    <h1 class="info">
+        <div class="overview">1.OVERVIEW</div><br><br>
+        <p class="p1">   &#187;&#187;Dengue (DENG-gey) fever is a mosquito-borne illness that occurs in tropical and
+            subtropical areas of the world. Mild dengue fever causes a high fever and flu-like symptoms. The severe form
+            of dengue fever, also called dengue hemorrhagic fever, can cause serious bleeding, a sudden drop in blood
+            pressure (shock) and death.</p>
+        <br>
+        <p class="p2">   &#187;&#187;Millions of cases of dengue infection occur worldwide each year. Dengue fever is most
+            common in Southeast Asia, the western Pacific islands, Latin America and Africa. But the disease has been
+            spreading to new areas, including local outbreaks in Europe and southern parts of the United States.</p>
+        <br>
+        <p class="p3">   &#187;&#187;Researchers are working on dengue fever vaccines. For now, in areas where dengue fever
+            is common, the best ways to prevent infection are to avoid being bitten by mosquitoes and to take steps to
+            reduce the mosquito population.</p>
+    </h1>
+    <br>
+    <hr><br>
+    <div class="Symptoms">
+        <h1 class="Symptoms_h">2.Symptoms of Dengue</h1>
+        <div class="list">
+            <ul style="list-style-type:disc">
+                <li>Nausea, vomiting.</li>
+                <li>Rash.</li>
+                <li>Aches and pains</li>
+                <li>Bleeding</li>
+                <li>Teeth pain</li>
+                <li>Sudden fever</li>
+                <li>High temperature</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <h1 class="type">
+        <div class="types_s">3.Types Of Dengue</div><br><br>
+        <p class="type_p">   &#187;About 40% of the population of the 100 countries where Dengue is endemic are susceptible to Dengue. If the diagnosis is made in the early stages, the chances of early recovery are high. Depending on the severity and the symptoms observed in the host, Dengue is classified into:
+            <div class="type_d">
+                <oi>
+                    <li>Mild Dengue Fever</li>
+                    <li>Dengue Haemorrhagic fever </li>
+                    <li>Dengue Shock Syndrome</li>
+                </oi>
+            </div>
+        </p>
+        <br>
+        <p class="type_p1"><div class="t1">[1] Mild Dengue Fever:</div> <br>
+        -->It takes up to 7 days for the symptoms of Mild Dengue Fever (MDF) to appear on the host. These symptoms include muscle aches, joint pains, Vomiting, High fever, intense and prolonged headaches. Dengue in this stage when diagnosed early can be intervened with different options depending on the severity of the condition.</p>
+        <br>
+        <p class="type_p2"><div class="t2">[2] Dengue Haemorrhagic fever: </div><br>
+        --> Dengue Haemorrhagic fever (DHF) is a serious condition or form of Dengue, when left untreated or when improper medication is taken, this form of Dengue can be fatal. The symptoms of DHF are often seen during or after recovering from MDF. DHF often occurs when blood transfusion occurs through a mosquito from a viremic person. The symptoms of DHF include but are not limited to the ones presented by a person infected with MDF.</p>
+        <br>
+        <p class="type_p3"><div class="t3">[3] Dengue Shock Syndrome:</div> <br> 
+        --> Dengue Shock Syndrome (DSS) is generally the next condition that patients experiencing DHF transition into. In this, the patient experiences a sudden onset of shock, high fever, and is prone to sudden collapse due to a significant drop in blood pressure. In this type of Dengue, the patient showcases severe headache, sore throat, and respiratory irregularities.
+        </p>
+    </h1>
+</body>
+
+</html>
